@@ -7,5 +7,5 @@ end
 Rails.application.routes.draw do
   draw :v1
   draw :admin
-  root to: 'home#index'
+  root to: 'v1/twitts#new'
 end
