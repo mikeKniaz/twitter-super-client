@@ -3,4 +3,7 @@
 class V1::TwittsController < ApplicationController
   def new
   end
+
+  def index
+  end
 end

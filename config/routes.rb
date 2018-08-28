@@ -5,7 +5,12 @@ class ActionDispatch::Routing::Mapper
 end
 
 Rails.application.routes.draw do
+  root to: 'v1/twitts#new'
+
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+  
   draw :v1
   draw :admin
-  root to: 'v1/twitts#new'
 end
