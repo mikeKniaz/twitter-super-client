@@ -43,6 +43,10 @@ gem 'rubocop', require: false
 group :development, :test do
   # An IRB alternative and runtime developer console for debugging
   gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  # retty print Ruby objects to visualize their structure
+  gem 'awesome_print', '~> 1.8'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
   gem 'selenium-webdriver'
@@ -56,3 +60,5 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+gem 'httparty'

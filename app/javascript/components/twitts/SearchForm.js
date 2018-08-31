@@ -20,7 +20,10 @@ class SearchForm extends React.Component {
     return (
       <form action="/v1/twitts">
         <input type="hidden" name="authenticity_token" value={this.token} readOnly={true} />
-        <TagsInput value={this.state.tags} onChange={this.handleChange} addKeys={[9, 13, 32]}/>
+        <TagsInput
+          value={this.state.tags}
+          onChange={this.handleChange}
+          addKeys={[9, 13, 32]}/>
         <button type="submit" className="btn btn-primary">
           Go
         </button>
