@@ -14,12 +14,14 @@ class SearchForm extends React.Component {
 
   handleChange(tags) {
     this.setState({tags})
+    document.body.querySelector('input[name="key_words"]').setAttribute("value", tags);
   }
 
   render () {
     return (
       <form action="/v1/twitts">
         <input type="hidden" name="authenticity_token" value={this.token} readOnly={true} />
+        <input type="hidden" name="key_words" value={this.state.tags} readOnly={true} />
         <TagsInput
           value={this.state.tags}
           onChange={this.handleChange}

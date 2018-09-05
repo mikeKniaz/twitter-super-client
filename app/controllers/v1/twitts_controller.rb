@@ -5,7 +5,6 @@ class V1::TwittsController < ApplicationController
   end
 
   def index
-    # @twitts = TwitterClient.new.get_twitts('Manchester United')
-    @twitts = params
+    @twitts = TwitterClient.new.get_twitts(params[:key_words] || 'Manchester United')
   end
 end
